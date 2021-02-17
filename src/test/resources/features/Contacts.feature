@@ -1,10 +1,11 @@
 Feature: Contacts page
 
-  Scenario: Default page number
+  Scenario:Default page number
     Given the user is on the login page
     And the user enters the driver information
     When the user navigates to "Customers" "Contacts"
     Then default page number should be 1
+
 
   Scenario: Verify Create Calender Event
     Given the user is on the login page
@@ -20,6 +21,7 @@ Feature: Contacts page
       | Customers  |
       | Activities |
       | System     |
+
 
   Scenario: Menu Options Sales Manager
     Given the user logged in as "sales manager"
@@ -39,21 +41,21 @@ Feature: Contacts page
     When the user logs in using following credentials
       | username  | user10      |
       | password  | UserUser123 |
-      | firstname | Toney       |
-      | lastname  | Hegmann     |
+      | firstname | Toney     |
+      | lastname  | Hegmann   |
     Then the user should be able to login
 
-
-  Scenario Outline: login as a given user <userType>
+  @wip
+  Scenario Outline: login as a given user <user>
     Given the user is on the login page
     When the user logs in using following credentials
-      | username  | <userType>  |
+      | username  | <user>      |
       | password  | UserUser123 |
       | firstname | <firstName> |
       | lastname  | <lastName>  |
     Then the user should be able to login
 
     Examples:
-      | userType       | firstName | lastName       |
-#      | user10         | Brenden   | Schneider |
-      | storemanager85 | Stephan   | Tremaine Haley |
+      | user           | firstName | lastName  |
+      | user10         | Brenden   | Schneider |
+      | storemanager85 | Stephan   | Haley     |

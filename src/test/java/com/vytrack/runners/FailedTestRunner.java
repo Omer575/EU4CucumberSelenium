@@ -11,5 +11,4 @@ import org.junit.runner.RunWith;
         glue = "com/vytrack/step_definitions"
 )
 public class FailedTestRunner {
-    // RECORDING: Day28 at 1:07:15
 }
