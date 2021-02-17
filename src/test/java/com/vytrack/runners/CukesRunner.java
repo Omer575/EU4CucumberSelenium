@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         dryRun = false,   // we use dryRun only to get right away the undefined step definition, when it's TRUE.
                         // When it's FALSE, the code inside every defined steps will be executed until cucumber reaches
                         // the undefined steps.
-        tags = "@wip" // will execute specific test('s)
+        tags = "@smoke" // will execute specific test('s)
 
 )
 public class CukesRunner {
