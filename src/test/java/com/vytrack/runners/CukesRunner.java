@@ -18,6 +18,15 @@ import org.junit.runner.RunWith;
                         // the undefined steps.
         tags = "@smoke" // will execute specific test('s)
 
+        // change the browser in terminal:
+        // mvn verify -Dbrowser=firefox
+
+        // change the tag from terminal:
+        // mvn verify -Dcucumber.option="--tags @smoke"
+
+        // change at same time:
+        // mvn verify -Dcucumber.option="--tags @smoke" -Dbrowser=firefox
+
 )
 public class CukesRunner {
 }
